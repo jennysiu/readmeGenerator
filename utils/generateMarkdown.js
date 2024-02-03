@@ -1,11 +1,14 @@
+
+
 // function to generate markdown for README
-function generateMarkdown(data) {
+export default function generateMarkdown(data) {
+  console.log("imported")
   return `# ${data.title}
 
 `;
 }
 
-module.exports = generateMarkdown;
+// module.exports = generateMarkdown;
 
 // todo: create markdown template - to be used later in template literal
 // todo: * When a user enters the project title then it is displayed as the title of the README
