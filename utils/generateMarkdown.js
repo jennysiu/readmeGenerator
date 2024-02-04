@@ -1,19 +1,98 @@
-
+import .meta.dirname. from "../../assets/licenses/"
 
 // function to generate markdown for README
-export default function generateMarkdown(data) {
-  console.log("imported")
-  return `# ${data.title}
+export default function generateMarkdown(answers) {
+  if (answers) {
+  // console.log(answers.name)
+  return `# ${answers.name}
 
-`;
+  ## Table of Contents
+  
+  - [Description](#description)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Technologies Used](#technologies-used)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+  - [Contrinutions](#contrinutions)
+  - [Contact](#contact)
+  
+  
+  ## Description
+  ${answers.description}
+  
+
+  ## Features
+  ${answers.features}
+  
+  
+  ## Installation
+  ${answers.installation}
+  
+  
+  ## Usage
+  ${answers.usage}  
+
+
+  ## Technologies Used
+  ${answers.usage}    
+  
+  
+  ## License
+  ${renderLicenseSection(answers.license)} 
+  
+  ## Acknowledgments
+  ${answers.acknowledgments} 
+
+
+  ## Contribtution
+  ${answers.contribution}
+  
+
+  ## Contact
+  If you have any questions, please reach me via:
+
+  ${answers.email} 
+  ${answers.githubUrl} 
+  ${answers.linkedinUrl} 
+
+
+  ` } else {
+    console.log("Users answers not available.")
+  }
+;
 }
 
-// module.exports = generateMarkdown;
+// logic for usage section: separate by lines 
+// ${answers.usage}  
 
-// todo: create markdown template - to be used later in template literal
-// todo: * When a user enters the project title then it is displayed as the title of the README
+// add license logic - use REST API
+async const renderLicenseSection = (license) => {
+  if (license == "MIT") {
+    const mitLicesne = await fetch("mit.txt");
+    // convert to text
+    const mitText = await mitLicesne.text()
+    return mitText
+  } else if (license == "GNU") {
+    const gnuLicesne = await fetch("gnu.txt");
+    // convert to text
+    const gnuText = await gnuLicesne.text()
+    return gnuText
+  } else if (license == "apache") {
+    const apacheLicesne = await fetch("apache.txt");
+    // convert to text
+    const apacheText = await apacheLicesne.text()
+    return apacheText
+  }
+   return `This project is licensed under ${license}`
+}
 
-// todo: When a user enters a description, installation instructions, usage information, contribution guidelines,
+
+// ! todo: create markdown template - to be used later in template literal
+// ! todo: * When a user enters the project title then it is displayed as the title of the README
+
+// ! todo: When a user enters a description, installation instructions, usage information, contribution guidelines,
 //  and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, 
 //  Contributing, and Tests
 
