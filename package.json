@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@octokit/core": "^5.1.0",
     "fs": "^0.0.1-security",
     "inquirer": "^9.2.13",
     "path": "^0.12.7",
