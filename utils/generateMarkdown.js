@@ -17,6 +17,7 @@ export default function generateMarkdown(answers) {
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Contrinutions](#contrinutions)
+- [Tests](#tests)
 - [Contact](#contact)
 
 
@@ -46,6 +47,10 @@ ${answers.acknowledgments}
 
 ## Contribtution
 ${answers.contribution}
+
+
+## Tests
+${answers.tests}
 
 
 ## Contact
