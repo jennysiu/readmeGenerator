@@ -1,5 +1,4 @@
 import fs from "fs"; 
-import util from "util";
 
 // function to generate markdown for README
 export default function generateMarkdown(answers) {
@@ -7,60 +6,56 @@ export default function generateMarkdown(answers) {
   // console.log(answers.name)
   return `# ${answers.name}
 
-  ## Table of Contents
-  
-  - [Description](#description)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Technologies Used](#technologies-used)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
-  - [Contrinutions](#contrinutions)
-  - [Contact](#contact)
-  
-  
-  ## Description
-  ${answers.description}
-  
+## Table of Contents
 
-  ## Features
-  ${answers.features}
-  
-  
-  ## Installation
-  ${answers.installation}
-  
-  
-  ## Usage
-  ${answers.usage}  
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contrinutions](#contrinutions)
+- [Contact](#contact)
 
 
-  ## Technologies Used
-  ${answers.usage}    
-  
-  
-  ## License
-  ${renderLicenseSection(answers.license)} 
-  
-  ## Acknowledgments
-  ${answers.acknowledgments} 
+## Description
+${answers.description}
 
 
-  ## Contribtution
-  ${answers.contribution}
-  
-
-  ## Contact
-  If you have any questions, please reach me via:
-
-  ${answers.email} 
-  ${answers.githubUrl} 
-  ${answers.linkedinUrl} 
+## Installation
+${answers.installation}
 
 
-  ` } else {
-    console.log("Users answers not available.")
+## Usage
+${answers.usage}  
+
+
+## Technologies Used
+${answers.usage}    
+
+
+## License
+${renderLicenseSection(answers.license)} 
+
+## Acknowledgments
+${answers.acknowledgments} 
+
+
+## Contribtution
+${answers.contribution}
+
+
+## Contact
+If you have any questions, please reach me via:
+
+- [Email](${answers.email})
+- [GitHub](${answers.githubUrl})
+- [LinkedIn](${answers.linkedinUrl})
+
+
+` } else {
+    console.log("User answers not available.")
   }
 ;
 }
@@ -81,7 +76,7 @@ const renderLicenseSection =  (license) => {
         return data
       })
       return mitLicense;
-    } else if (license == "gnu.txt") {
+    } else if (license == "GNU General Public License v3.0 (GPL-3.0)") {
       const gnuLicense = fs.readFileSync("../../assets/licenses/gnu.txt", 'utf8', (err, data) => {
         if (err) {
           console.log(err);
@@ -116,10 +111,10 @@ const renderLicenseSection =  (license) => {
 //  license is added near the top of the README and a notice is added to the section of the README 
 //  entitled License that explains which license the application is covered under
 
-// todo: When a user enters their GitHub username then this is added to the section of the README entitled 
+// ! todo: When a user enters their GitHub username then this is added to the section of the README entitled 
 // Questions, with a link to their GitHub profile
 
-// todo: When a user enters their email address then this is added to the section of the README entitled Questions, with
+// ! todo: When a user enters their email address then this is added to the section of the README entitled Questions, with
 //  instructions on how to reach them with additional questions
 
-// todo: When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
+// ! todo: When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
