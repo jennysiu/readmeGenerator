@@ -9,11 +9,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () => {
   return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: "What's the title of your project?"
-    }
+    // {
+    //   type: "input",
+    //   name: "name",
+    //   message: "What's the title of your project?"
+    // }
     // ,
   //   {
   //     type: "input",
@@ -49,16 +49,17 @@ const promptUser = () => {
   //       "GIFs"
   //     ]
   //   },
-  //   {
-  //     type: "list",
-  //     name: "license",
-  //     message: "Which license have you chosen for your project?",
-  //     choices: [
-  //       "MIT License (MIT)",
-  //       "GNU General Public License v3.0 (GPL-3.0)",
-  //       "Apache License 2.0 (Apache-2.0)"
-  //     ]
-  //   },
+    {
+      type: "list",
+      name: "license",
+      message: "Which license have you chosen for your project?",
+      choices: [
+        "MIT License (MIT)",
+        "GNU General Public License v3.0 (GPL-3.0)",
+        "Apache License 2.0 (Apache-2.0)"
+      ]
+    }
+    // ,
   //   {
   //     type: "input",
   //     name: "contribution",
@@ -94,8 +95,6 @@ const promptUser = () => {
   //   }
   ]);
 };
-
-// promptUser();
 
 // todo: function to write README file (look into changing to arrow function)
 async function writeToFile(fileName, answers) {

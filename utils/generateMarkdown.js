@@ -1,4 +1,5 @@
-import .meta.dirname. from "../../assets/licenses/"
+import fs from "fs"; 
+import util from "util";
 
 // function to generate markdown for README
 export default function generateMarkdown(answers) {
@@ -67,27 +68,42 @@ export default function generateMarkdown(answers) {
 // logic for usage section: separate by lines 
 // ${answers.usage}  
 
-// add license logic - use REST API
-async const renderLicenseSection = (license) => {
-  if (license == "MIT") {
-    const mitLicesne = await fetch("mit.txt");
-    // convert to text
-    const mitText = await mitLicesne.text()
-    return mitText
-  } else if (license == "GNU") {
-    const gnuLicesne = await fetch("gnu.txt");
-    // convert to text
-    const gnuText = await gnuLicesne.text()
-    return gnuText
-  } else if (license == "apache") {
-    const apacheLicesne = await fetch("apache.txt");
-    // convert to text
-    const apacheText = await apacheLicesne.text()
-    return apacheText
-  }
-   return `This project is licensed under ${license}`
-}
 
+// function to render  license section
+const renderLicenseSection =  (license) => {
+  try {
+    if (license === "MIT License (MIT)") {
+       const mitLicense = fs.readFileSync("../../assets/licenses/mit.txt",  'utf8', (err, data) => {
+        if (err) {
+          console.log(err);
+          return "error"
+        } 
+        return data
+      })
+      return mitLicense;
+    } else if (license == "gnu.txt") {
+      const gnuLicense = fs.readFileSync("../../assets/licenses/gnu.txt", 'utf8', (err, data) => {
+        if (err) {
+          console.log(err);
+          return "error"
+        } 
+        return data
+      })
+      return gnuLicense;
+    } else if (license == "Apache License 2.0 (Apache-2.0)") {
+      const apacheLicense = fs.readFileSync("../../assets/licenses/apache.txt", 'utf8', (err, data) => {
+        if (err) {
+          console.log(err);
+          return "error"
+        } 
+        return data
+      })
+      return apacheLicense;
+    } 
+  } catch(err){
+    console.error(err);
+  };
+}
 
 // ! todo: create markdown template - to be used later in template literal
 // ! todo: * When a user enters the project title then it is displayed as the title of the README
