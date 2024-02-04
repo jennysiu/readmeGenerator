@@ -1,5 +1,4 @@
 import fs from "fs";
-import path from "path";
 import inquirer from "inquirer";
 import util from "util";
 
@@ -9,46 +8,46 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () => {
   return inquirer.prompt([
-    // {
-    //   type: "input",
-    //   name: "name",
-    //   message: "What's the title of your project?"
-    // }
-    // ,
-    // {
-    //   type: "input",
-    //   name: "description",
-    //   message: "Write a brief description of your project"
-    // },
-    // {
-    //   type: "checkbox",
-    //   name: "tableOfContents",
-    //   message: "Please select the sections you want to include in your README's table of contents",
-    //   choices: [
-    //     "Title",
-    //     "Description",
-    //     "Installation",
-    //     "Usage",
-    //     "License",
-    //     "Contributing",
-    //     "Contact"
-    //   ]
-    // },
-    // {
-    //   type: "input",
-    //   name: "installation",
-    //   message: "What are the installation requirements to run this application? Provide step-by-step"
-    // },
-    // {
-    //   type: "checkbox",
-    //   name: "usage",
-    //   message: "What usage information would you like to provide users?",
-    //   choices: [
-    //     "Step-by-step instructions",
-    //     "Screenshots",
-    //     "GIFs"
-    //   ]
-    // },
+    {
+      type: "input",
+      name: "name",
+      message: "What's the title of your project?"
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "Write a brief description of your project"
+    },
+    {
+      type: "checkbox",
+      name: "tableOfContents",
+      message: "Please select the sections you want to include in your README's table of contents",
+      choices: [
+        "Title",
+        "Description",
+        "Installation",
+        "Usage",
+        "License",
+        "Contributing",
+        "Tests",
+        "Contact"
+      ]
+    },
+    {
+      type: "input",
+      name: "installation",
+      message: "What are the installation requirements to run this application? Provide step-by-step"
+    },
+    {
+      type: "checkbox",
+      name: "usage",
+      message: "What usage information would you like to provide users?",
+      choices: [
+        "Step-by-step instructions",
+        "Screenshots",
+        "GIFs"
+      ]
+    },
     {
       type: "list",
       name: "license",
@@ -58,12 +57,16 @@ const promptUser = () => {
         "GNU General Public License v3.0 (GPL-3.0)",
         "Apache License 2.0 (Apache-2.0)"
       ]
-    }
-    ,
+    },
     {
       type: "input",
       name: "contribution",
       message: "How can others contribute to your project? Please provide guidelines for contributions."
+    },
+    {
+      type: "input",
+      name: "Tests",
+      message: "Which tests are available for users to execute? Please specify."
     },
     {
       type: "checkbox",
@@ -96,7 +99,7 @@ const promptUser = () => {
   ]);
 };
 
-// todo: function to write README file (look into changing to arrow function)
+// function to write README file 
 async function writeToFile(fileName, answers) {
   console.log("starting write to file function")
 
