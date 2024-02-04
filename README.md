@@ -16,39 +16,46 @@ This is the README file for the README generator. It provides information about 
 
 
 ## Description
-available licenses - mit, gnu and apache.
+This command-line application simplifies the process of creating a professional README.md file for your projects. Utilizing the Inquirer package, it dynamically generates a README.md file from user inputs, allowing developers to focus more on their projects. Whether you're starting a new project or updating an existing one, this tool ensures your README is complete, well-structured, and professional.
 
 ## Installation
 
-No installation is required, you can access the live URL here: https://jennysiu.github.io/weatherForecastDashboard/
+To use this README generator, follow these steps:
 
-To view the code files, you can Git Clone by following the instructions below:
-1. Clone the repository: `git clone [https://github.com/jennysiu/weatherForecastDashboard]`
-2. Navigate to the project directory: `cd weatherForecastDashboard`
-3. Open the relevant code files. 
+1. Ensure that Node.js is installed on your system.
+2. Clone this repository to your local machine.
+3. Run npm install to install the required dependencies, including the Inquirer package.
 
 
 ## Usage
 
-No installation is required, you can access the live URL here: https://jennysiu.github.io/weatherForecastDashboard/
+To generate your README.md file, follow these steps:
 
-Once the webpage link is opened, it should look something like this:
-![Demo GIF of how the webpage should look like upon opening.](./assets/images/weatherForecastDashboardDemo.jpg)
+1. Open a terminal in the directory where you've cloned this repository.
 
+2. Run the command:
+[node index.js]
+
+Answer the prompts regarding your project's details, including:
+- Project Title
+- What to include in your table of contents
+- Description
+- Installation Instructions
+- Usage Information
+- Contribution Guidelines
+- Test Instructions
+- License Selection (MIT, GNU, Apache)
+- GitHub Username
+- Email Address
+- Upon completion, the app will generate a README.md file in your directory, tailored to your project based on your responses.
 
 ## Technologies Used
 
 - JavaScript
-- HTML5
-- CSS3
-- Bootstrap
-
-### Technical details
-- The application primarily uses JavaScript for its functionality.
-- Fetch API is employed to make requests to the OpenWeatherMap API.
-- Local storage is used to store recent search data.
-- Day.js library is used for date formatting.
-- Bootstrap is utilized for styling and layout purposes.
+- node.js
+- Inquirer node package
+- fs node package
+- util node package
 
 
 ## License
@@ -72,6 +79,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contact
 Feel free to reach out to me if you have any questions or feedback.
 
-Jenny Siu
-jenny.siu79@gmail.com
-https://www.linkedin.com/in/jenny-siu-534576156/
+
+[Email](jenny.siu79@gmail.com) |
+[linkedIn](https://www.linkedin.com/in/jenny-siu-534576156/) |
+[GitHub](https://github.com/jennysiu/readmeGenerator)
+
+Jenny Siu 
