@@ -1,34 +1,27 @@
-# readme [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# wdf [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Table of Contents
 
 - [Description](#description)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 - [Contrinutions](#contrinutions)
 - [Tests](#tests)
 - [Contact](#contact)
 
 
 ## Description
-desc
+wef
 
 
 ## Installation
-edf
+n/a
 
 
 ## Usage
-undefined  
-
-
-## Technologies Used
-undefined    
+n/a  
 
 
 ## License
@@ -55,23 +48,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 
 
-## Acknowledgments
-undefined 
-
-
 ## Contribtution
-undefined
+n/a
 
 
 ## Tests
-undefined
+n/a
 
 
 ## Contact
 If you have any questions, please reach me via:
 
-- [Email](email@)
-- [GitHub](undefined)
-- [LinkedIn](undefined)
+- [Email](n/a)
+- [GitHub](n/a)
+- [LinkedIn](n/a)
 
 
