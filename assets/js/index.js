@@ -36,14 +36,9 @@ const promptUser = () => {
       when: answers => answers.tableOfContents.includes('installation')
     },
     {
-      type: "checkbox",
+      type: "input",
       name: "usage",
-      message: "What usage information would you like to provide users?",
-      choices: [
-        "Step-by-step instructions",
-        "Screenshots",
-        "GIFs"
-      ],
+      message: "Please provide instructions on how users can us?",
       when: answers => answers.tableOfContents.includes('usage')
     },
     {
