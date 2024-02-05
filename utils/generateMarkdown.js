@@ -10,12 +10,9 @@ export default function generateMarkdown(answers) {
 ## Table of Contents
 
 - [Description](#description)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 - [Contrinutions](#contrinutions)
 - [Tests](#tests)
 - [Contact](#contact)
@@ -39,10 +36,6 @@ ${answers.usage}
 
 ## License
 ${renderLicenseSection(answers.license)} 
-
-
-## Acknowledgments
-${answers.acknowledgments} 
 
 
 ## Contribtution
