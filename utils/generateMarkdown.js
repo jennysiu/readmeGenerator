@@ -23,15 +23,11 @@ ${answers.description}
 
 
 ## Installation
-${answers.installation}
+${answers.installation || "n/a"}
 
 
 ## Usage
-${answers.usage}  
-
-
-## Technologies Used
-${answers.usage}    
+${answers.usage || "n/a"}  
 
 
 ## License
@@ -39,23 +35,23 @@ ${renderLicenseSection(answers.license)}
 
 
 ## Contribtution
-${answers.contribution}
+${answers.contribution || "n/a"}
 
 
 ## Tests
-${answers.tests}
+${answers.tests || "n/a"}
 
 
 ## Contact
 If you have any questions, please reach me via:
 
-- [Email](${answers.email})
-- [GitHub](${answers.githubUrl})
-- [LinkedIn](${answers.linkedinUrl})
+- [Email](${answers.email || "n/a"})
+- [GitHub](${answers.githubUrl || "n/a"})
+- [LinkedIn](${answers.linkedinUrl || "n/a"})
 
 
 ` } else {
-    console.log("User answers not available.")
+    console.log("Problem with passing user answers.")
   }
 ;
 }
