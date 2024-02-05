@@ -23,20 +23,17 @@ const promptUser = () => {
       name: "tableOfContents",
       message: "Please select the sections you want to include in your README's table of contents",
       choices: [
-        "Title",
-        "Description",
-        "Installation",
-        "Usage",
-        "License",
-        "Contributing",
-        "Tests",
-        "Contact"
+        {name:"Installation", value: "installation"},
+        {name: "Usage", value: "usage"},
+        {name: "Contributing", value: "contributing"},
+        {name: "Tests", value: "tests"},
       ]
     },
     {
       type: "input",
       name: "installation",
-      message: "What are the installation requirements to run this application? Provide step-by-step"
+      message: "What are the installation requirements to run this application? Provide step-by-step",
+      when: answers => answers.tableOfContents.includes('installation')
     },
     {
       type: "checkbox",
@@ -46,7 +43,8 @@ const promptUser = () => {
         "Step-by-step instructions",
         "Screenshots",
         "GIFs"
-      ]
+      ],
+      when: answers => answers.tableOfContents.includes('usage')
     },
     {
       type: "list",
@@ -61,12 +59,14 @@ const promptUser = () => {
     {
       type: "input",
       name: "contribution",
-      message: "How can others contribute to your project? Please provide guidelines for contributions."
+      message: "How can others contribute to your project? Please provide guidelines for contributions.",
+      when: answers => answers.tableOfContents.includes("contributing")
     },
     {
       type: "input",
       name: "Tests",
-      message: "Which tests are available for users to execute? Please specify."
+      message: "Which tests are available for users to execute? Please specify.",
+      when: answers => answers.tableOfContents.includes('tests')
     },
     {
       type: "checkbox",
