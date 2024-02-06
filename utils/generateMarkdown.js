@@ -6,9 +6,6 @@ export default function generateMarkdown(answers) {
   // console.log(answers.name)
   return `# ${answers.name} ${renderLicenseBadge(answers.license)}
 
-## Description
-${answers.description}
-
 ## Table of Contents
 
 - [Description](#description)
