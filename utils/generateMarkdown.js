@@ -6,6 +6,8 @@ export default function generateMarkdown(answers) {
   // console.log(answers.name)
   return `# ${answers.name} ${renderLicenseBadge(answers.license)}
 
+## Description
+${answers.description}
 
 ## Table of Contents
 
@@ -14,7 +16,6 @@ export default function generateMarkdown(answers) {
 - [Usage](#usage)
 - [License](#license)
 - [Contrinutions](#contrinutions)
-- [Tests](#tests)
 - [Contact](#contact)
 
 
@@ -23,11 +24,12 @@ ${answers.description}
 
 
 ## Installation
-${answers.installation || "n/a"}
+${answers.installation}
 
 
 ## Usage
-${answers.usage || "n/a"}  
+${answers.usage}  
+
 
 
 ## License
@@ -35,20 +37,13 @@ ${renderLicenseSection(answers.license)}
 
 
 ## Contribtution
-${answers.contribution || "n/a"}
-
-
-## Tests
-${answers.tests || "n/a"}
+${answers.contribution}
 
 
 ## Contact
 If you have any questions, please reach me via:
 
-- [Email](${answers.email || "n/a"})
-- [GitHub](${answers.githubUrl || "n/a"})
-- [LinkedIn](${answers.linkedinUrl || "n/a"})
-
+[Email](${answers.email || "N/A"}) | [GitHub](${answers.githubUrl || "N/A"}) | [LinkedIn](${answers.linkedinUrl || "N/A"})
 
 ` } else {
     console.log("Problem with passing user answers.")
