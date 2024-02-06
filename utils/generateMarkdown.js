@@ -16,6 +16,7 @@ ${answers.description}
 - [Usage](#usage)
 - [License](#license)
 - [Contrinutions](#contrinutions)
+- [Tests](#tests)
 - [Contact](#contact)
 
 
@@ -24,11 +25,11 @@ ${answers.description}
 
 
 ## Installation
-${answers.installation}
+${answers.installation || "N/A"}}
 
 
 ## Usage
-${answers.usage}  
+${answers.usage || "N/A"}  
 
 
 
@@ -37,7 +38,10 @@ ${renderLicenseSection(answers.license)}
 
 
 ## Contribtution
-${answers.contribution}
+${answers.contribution || "N/A"}
+
+## Tests
+${answers.tests || "N/A"}
 
 
 ## Contact
