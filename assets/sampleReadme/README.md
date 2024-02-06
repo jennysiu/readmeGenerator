@@ -1,7 +1,4 @@
-# aersdfg [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## Description
-wRGD
+# readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 
@@ -15,22 +12,22 @@ wRGD
 
 
 ## Description
-wRGD
+This application allows you to generate a readme for your project through the terminal.
 
 
 ## Installation
-AEDRFG}
+Ensure that node.js is installed on your system, clone this repository to your local machine, run nom install to install the required dependencies, including the inquirer package.}
 
 
 ## Usage
-N/A  
+Type in node index.js in terminal and answer the user prompts.  
 
 
 
 ## License
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -52,7 +49,7 @@ SOFTWARE.
 
 
 ## Contribtution
-N/A
+Contributions to this project are welcome. To contribute: fork the repo and create a new branch for your feature.
 
 ## Tests
 N/A
@@ -61,5 +58,5 @@ N/A
 ## Contact
 If you have any questions, please reach me via:
 
-[Email](JEN@EM) | [GitHub](N/A) | [LinkedIn](N/A)
+[Email](jen@email) | [GitHub](jen@git) | [LinkedIn](jen@linkedin)
 
