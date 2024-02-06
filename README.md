@@ -51,6 +51,9 @@ Answer the prompts regarding your project's details, including:
 
 A video to demonstrate how this works: [https://drive.google.com/file/d/1I-8Pd-qgheKRG4FiCeJ6NOqSeW2ZmY1G/view?usp=drive_link]
 
+Screenshot of what the output README would look like:
+![Screenshot of what the output README would look like](./assets/images/readMeScreenshot.jpg)
+
 ## Technologies Used
 
 - JavaScript

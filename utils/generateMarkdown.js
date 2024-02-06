@@ -22,7 +22,7 @@ ${answers.description}
 
 
 ## Installation
-${answers.installation || "N/A"}}
+${answers.installation || "N/A"}
 
 
 ## Usage
